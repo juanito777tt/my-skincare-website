@@ -42,26 +42,5 @@ modal.addEventListener('click', function (e) {
     }
 });
 
-// Carousel Slider for Hero Section
-let currentSlide = 0;
-const slides = [
-    'images/nature-background.jpg',
-    'images/cosrx-advanced-snail-92-all-in-one-cream.jpg',
-    'images/somebymi-aha-bha-pha-30-days-cream.jpg'
-];
-const hero = document.querySelector('.hero');
-
-function showSlide(slideIndex) {
-    hero.style.backgroundImage = `url(${slides[slideIndex]})`;
-}
-
-setInterval(function () {
-    currentSlide = (currentSlide + 1) % slides.length;
-    showSlide(currentSlide);
-}, 5000);  // Change slide every 5 seconds
-
-// Initial Slide Display
-showSlide(currentSlide);
-
 // Console Feedback for Debugging
 console.log('JavaScript Loaded Successfully');
