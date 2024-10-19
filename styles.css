@@ -1,49 +1,74 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/nature-background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #fff;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background color */
 }
 
 header {
-    text-align: center;
+    background-color: #333; /* Dark background for header */
+    color: white;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
 }
 
-.products {
+nav {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
+    justify-content: center; /* Center navigation items */
 }
 
-.product {
-    background-color: rgba(255, 255, 255, 0.1);
-    margin: 10px;
-    padding: 15px;
-    border-radius: 10px;
+nav a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 15px 20px; /* Add padding for clickable area */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #555; /* Change color on hover */
+}
+
+nav a.active {
+    background-color: #111; /* Highlight active link */
+}
+
+.about-banner {
+    position: relative;
+}
+
+.about-banner img {
+    width: 100%; /* Full width for background image */
+    height: auto;
+}
+
+.about-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
     text-align: center;
-    width: 200px;
-    transition: transform 0.3s;
 }
 
-.product img {
-    width: 100%;
-    border-radius: 10px;
+.about-content {
+    padding: 20px;
+    background-color: white; /* White background for content */
+    margin: 20px; /* Space around content */
+    border-radius: 5px; /* Rounded corners */
 }
 
-.product h3 {
-    margin: 10px 0 0 0;
-    font-size: 1.1em;
+.about-image {
+    width: 100%; /* Responsive images */
+    height: auto; /* Maintain aspect ratio */
+    margin: 20px 0; /* Space around images */
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #333; /* Dark background for footer */
+    color: white;
     position: relative;
     bottom: 0;
     width: 100%;
