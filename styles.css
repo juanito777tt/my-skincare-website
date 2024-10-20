@@ -104,32 +104,27 @@ nav ul li a:hover {
 
 /* About Page Styles */
 .about {
-    background-image: url('images/green-tea-leaves-brian-kennedy.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background: url('images/argan-oil.jpg') left / 50% no-repeat, 
+                url('images/green-tea-leaves-brian-kennedy.jpg') right / cover no-repeat; /* Change to cover for the green tea image */
+    background-size: cover; /* Ensure the green tea leaves cover the right side */
 }
 
 .about-content {
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    text-align: center;
+    padding: 40px; /* Increase padding for a more spacious feel */
+    background-color: rgba(0, 0, 0, 0.6); /* Darker semi-transparent background for readability */
+    width: 50%; /* Take up half the screen */
 }
 
 .about-content h2 {
-    font-size: 2.5rem;
+    font-size: 2.5rem; /* Increase heading size */
     margin-bottom: 1rem;
 }
 
 .about-content p {
-    font-size: 1.2rem;
-    color: #333;
+    font-size: 1.2rem; /* Increase paragraph size */
+    line-height: 1.6; /* Increase line height for better readability */
 }
 
 /* Footer Styles */
