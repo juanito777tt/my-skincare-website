@@ -114,10 +114,11 @@ nav ul li a:hover {
 }
 
 .about-content {
-    background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+    background-color: rgba(50, 50, 50, 0.9); /* Darker grey with slight transparency */
+    color: white; /* White text */
     padding: 2rem;
-    max-width: 600px; /* Limit width of the box */
-    margin-left: 50px; /* Space from the left */
+    max-width: 45%; /* Limit width to just under half the screen */
+    margin-left: 0%; /* Space from the left */
     border-radius: 8px;
 }
 
