@@ -1,1 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: white;
+}
+
+header {
+    background-color: black;
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('images/nature-background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.cta-button {
+    text-decoration: none;
+    background-color: gold;
+    color: black;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.products-section {
+    padding: 50px;
+    background-color: white;
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.product img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.product p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+}
 
