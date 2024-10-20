@@ -1,46 +1,67 @@
-<script>
-// Smooth scroll for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            window.scrollTo({
+                top: targetElement.offsetTop - 50,
+                behavior: 'smooth'
+            });
+        }
     });
 });
 
-// Modal for product display
-const modal = document.createElement("div");
-modal.id = "productModal";
-modal.style.cssText = "display:none;position:fixed;z-index:1;padding-top:100px;left:0;top:0;width:100%;height:100%;overflow:auto;background-color:rgba(0,0,0,0.9);";
+// Product Modal Popup
+const products = document.querySelectorAll('.product');
+const modal = document.createElement('div');
+modal.classList.add('modal');
 document.body.appendChild(modal);
 
-const modalImg = document.createElement("img");
-modalImg.id = "modal-img";
-modalImg.style.cssText = "margin:auto;display:block;width:80%;max-width:700px;";
-modal.appendChild(modalImg);
+products.forEach((product, index) => {
+    product.addEventListener('click', function () {
+        const productTitle = product.querySelector('h3').innerText;
+        const productImageSrc = product.querySelector('img').src;
 
-const span = document.createElement("span");
-span.className = "close";
-span.innerHTML = "&times;";
-span.style.cssText = "position:absolute;top:15px;right:35px;color:white;font-size:40px;font-weight:bold;cursor:pointer;";
-modal.appendChild(span);
-
-span.onclick = function() { 
-    modal.style.display = "none";
-};
-
-document.querySelectorAll(".product img").forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = "block";
-        modalImg.src = img.src;
+        modal.innerHTML = `
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <img src="${productImageSrc}" alt="${productTitle}">
+                <h3>${productTitle}</h3>
+                <p>More information about ${productTitle}...</p>
+            </div>
+        `;
+        modal.style.display = 'block';
     });
 });
 
-// Parallax effect for a background
-window.addEventListener('scroll', function() {
-    const scrolled = window.pageYOffset;
-    document.querySelector('.parallax').style.transform = 'translateY(' + scrolled * 0.5 + 'px)';
+modal.addEventListener('click', function (e) {
+    if (e.target.classList.contains('close') || e.target === modal) {
+        modal.style.display = 'none';
+    }
 });
-</script>
 
+// Carousel Slider for Hero Section
+let currentSlide = 0;
+const slides = [
+    'images/nature-background.jpg',
+    'images/cosrx-advanced-snail-92-all-in-one-cream.jpg',
+    'images/somebymi-aha-bha-pha-30-days-cream.jpg'
+];
+const hero = document.querySelector('.hero');
+
+function showSlide(slideIndex) {
+    hero.style.backgroundImage = `url(${slides[slideIndex]})`;
+}
+
+setInterval(function () {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+}, 5000);  // Change slide every 5 seconds
+
+// Initial Slide Display
+showSlide(currentSlide);
+
+// Console Feedback for Debugging
+console.log('JavaScript Loaded Successfully');
