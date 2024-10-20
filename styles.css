@@ -172,4 +172,28 @@ footer {
     text-align: center;
     padding: 1rem 0;
 }
+.about {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    background: url('images/argan-oil.jpg') left / 50% no-repeat, 
+                url('images/green-tea-leaves-brian-kennedy.jpg') right / 50% no-repeat;
+    color: white; /* Change text color for better visibility */
+}
+
+.about-content {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    width: 50%; /* Take up half the screen */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
 
