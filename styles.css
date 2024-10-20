@@ -114,7 +114,7 @@ nav ul li a:hover {
 }
 
 .about-content {
-    background-color: rgba(50, 50, 50, 0.9); /* Darker grey with slight transparency */
+    background-color: rgba(50, 50, 50, 0.8); /* Darker grey with increased opacity */
     color: white; /* White text */
     padding: 2rem;
     max-width: 45%; /* Limit width to just under half the screen */
