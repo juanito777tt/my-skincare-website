@@ -149,7 +149,7 @@ nav ul li a:hover {
     padding: 2rem;
     max-width: 45%;
     height: 100vh; /* Full height */
-    margin-left: 5%;
+    margin-left: 0%;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
