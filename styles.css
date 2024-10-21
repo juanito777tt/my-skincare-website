@@ -109,7 +109,7 @@ nav ul li a:hover {
     padding: 2rem;
     max-width: 45%; /* Limit width to just under half the screen */
     height: 100vh; /* Full viewport height */
-    margin-left: 5%; /* Space from the left */
+    margin-left: 0%; /* Space from the left */
     border-radius: 8px;
     display: flex; /* Flexbox to position content */
     flex-direction: column; /* Stack content vertically */
