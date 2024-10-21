@@ -135,7 +135,7 @@ nav ul li a:hover {
     line-height: 1.5; /* Improved readability */
 }
 .about-page {
-    background-image: url('images/green-tea-leaves-brian-kennedy.jpg');
+    background-image: url('green-tea-leaves-brian-kennedy.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
