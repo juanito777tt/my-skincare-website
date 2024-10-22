@@ -147,6 +147,7 @@ footer {
 }
 
 /* About Page Styles */
+/* About Page Styles */
 .about-page {
     background-image: url('images/green-tea-leaves-brian-kennedy.jpg');
     background-size: cover;
@@ -160,12 +161,15 @@ footer {
     background-color: rgba(50, 50, 50, 0.8); /* Dark grey with slight opacity */
     color: white;
     padding: 2rem;
-    max-width: 45%;
+    width: 50%; /* Cover entire left side */
     height: 100vh; /* Full height */
-    margin-left: 5%;
-    border-radius: 8px;
+    position: absolute;
+    left: 0;
+    top: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     font-size: 1.2rem;
+}
+
 }
